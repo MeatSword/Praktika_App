@@ -22,7 +22,9 @@ namespace prk_25
 
                     if (db.Roles.Where(_ => _.IdRole == db.Personals.Where(_ => _.IdPersonal == user.IdPersonal).FirstOrDefault().RoleId).FirstOrDefault().Name == "Рабочий")
                     {
-                        MessageBox.Show("Вы вошли как рабочий");
+                        Worker zv = new Worker();
+                        this.Hide();
+                        zv.Show();
                     }
                     if (db.Roles.Where(_ => _.IdRole == db.Personals.Where(_ => _.IdPersonal == user.IdPersonal).FirstOrDefault().RoleId).FirstOrDefault().Name == "Специалист")
                     {
@@ -36,10 +38,7 @@ namespace prk_25
                         this.Hide();
                         zv.Show();
                     }
-                    if (db.Roles.Where(_ => _.IdRole == db.Personals.Where(_ => _.IdPersonal == user.IdPersonal).FirstOrDefault().RoleId).FirstOrDefault().Name == "Служащий")
-                    {
-                        MessageBox.Show("Вы вошли как рабочий");
-                    }
+                
                 }
                 else
                 {

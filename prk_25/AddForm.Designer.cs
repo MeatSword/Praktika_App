@@ -30,33 +30,32 @@
         {
             tbc_1 = new TabControl();
             personal_tab = new TabPage();
-            orders_tab = new TabPage();
-            materials_tab = new TabPage();
-            label1 = new Label();
-            txt_PersonalRoleID = new TextBox();
-            txt_PersonalOtdelID = new TextBox();
-            txt_PersonalName = new TextBox();
-            txt_PersonalSname = new TextBox();
-            txt_PersonalLname = new TextBox();
-            label2 = new Label();
-            label3 = new Label();
-            label4 = new Label();
-            label5 = new Label();
-            label6 = new Label();
+            txt_PersonalOtdelID = new ComboBox();
+            txt_PersonalRoleID = new ComboBox();
+            btn_Add1 = new Button();
             label7 = new Label();
             txt_PersonalPhone = new TextBox();
-            btn_Add1 = new Button();
+            label6 = new Label();
+            label5 = new Label();
+            label4 = new Label();
+            label3 = new Label();
+            label2 = new Label();
+            txt_Pass = new TextBox();
+            txt_Log = new TextBox();
+            txt_PersonalName = new TextBox();
+            orders_tab = new TabPage();
+            txt_OrdersProccesID = new ComboBox();
+            txt_OrdersOtdelID = new ComboBox();
+            ch_OrdersStatus = new CheckBox();
             btn_Add2 = new Button();
             label9 = new Label();
-            label10 = new Label();
             label11 = new Label();
             label12 = new Label();
             label13 = new Label();
-            txt_OrdersDate = new TextBox();
             txt_OrdersPartnerID = new TextBox();
-            txt_OrdersProccesID = new TextBox();
-            txt_OrdersOteldID = new TextBox();
-            ch_OrdersStatus = new CheckBox();
+            materials_tab = new TabPage();
+            txt_MaterialsProviderID = new ComboBox();
+            txt_MaterialsTypeMatID = new ComboBox();
             btn_Add3 = new Button();
             label14 = new Label();
             label15 = new Label();
@@ -66,8 +65,7 @@
             txt_MaterialsName = new TextBox();
             txt_MaterialsPrice = new TextBox();
             txt_MaterialsDencity = new TextBox();
-            txt_MaterialsProviderID = new TextBox();
-            txt_MaterialsType = new TextBox();
+            label1 = new Label();
             tbc_1.SuspendLayout();
             personal_tab.SuspendLayout();
             orders_tab.SuspendLayout();
@@ -87,6 +85,8 @@
             // 
             // personal_tab
             // 
+            personal_tab.Controls.Add(txt_PersonalOtdelID);
+            personal_tab.Controls.Add(txt_PersonalRoleID);
             personal_tab.Controls.Add(btn_Add1);
             personal_tab.Controls.Add(label7);
             personal_tab.Controls.Add(txt_PersonalPhone);
@@ -95,11 +95,9 @@
             personal_tab.Controls.Add(label4);
             personal_tab.Controls.Add(label3);
             personal_tab.Controls.Add(label2);
-            personal_tab.Controls.Add(txt_PersonalLname);
-            personal_tab.Controls.Add(txt_PersonalSname);
+            personal_tab.Controls.Add(txt_Pass);
+            personal_tab.Controls.Add(txt_Log);
             personal_tab.Controls.Add(txt_PersonalName);
-            personal_tab.Controls.Add(txt_PersonalOtdelID);
-            personal_tab.Controls.Add(txt_PersonalRoleID);
             personal_tab.Location = new Point(4, 24);
             personal_tab.Name = "personal_tab";
             personal_tab.Padding = new Padding(3);
@@ -108,179 +106,23 @@
             personal_tab.Text = "Personal";
             personal_tab.UseVisualStyleBackColor = true;
             // 
-            // orders_tab
+            // txt_PersonalOtdelID
             // 
-            orders_tab.Controls.Add(ch_OrdersStatus);
-            orders_tab.Controls.Add(btn_Add2);
-            orders_tab.Controls.Add(label9);
-            orders_tab.Controls.Add(label10);
-            orders_tab.Controls.Add(label11);
-            orders_tab.Controls.Add(label12);
-            orders_tab.Controls.Add(label13);
-            orders_tab.Controls.Add(txt_OrdersDate);
-            orders_tab.Controls.Add(txt_OrdersPartnerID);
-            orders_tab.Controls.Add(txt_OrdersProccesID);
-            orders_tab.Controls.Add(txt_OrdersOteldID);
-            orders_tab.Location = new Point(4, 24);
-            orders_tab.Name = "orders_tab";
-            orders_tab.Padding = new Padding(3);
-            orders_tab.Size = new Size(533, 379);
-            orders_tab.TabIndex = 1;
-            orders_tab.Text = "Orders";
-            orders_tab.UseVisualStyleBackColor = true;
-            // 
-            // materials_tab
-            // 
-            materials_tab.Controls.Add(btn_Add3);
-            materials_tab.Controls.Add(label14);
-            materials_tab.Controls.Add(label15);
-            materials_tab.Controls.Add(label16);
-            materials_tab.Controls.Add(label17);
-            materials_tab.Controls.Add(label18);
-            materials_tab.Controls.Add(txt_MaterialsName);
-            materials_tab.Controls.Add(txt_MaterialsPrice);
-            materials_tab.Controls.Add(txt_MaterialsDencity);
-            materials_tab.Controls.Add(txt_MaterialsProviderID);
-            materials_tab.Controls.Add(txt_MaterialsType);
-            materials_tab.Location = new Point(4, 24);
-            materials_tab.Name = "materials_tab";
-            materials_tab.Padding = new Padding(3);
-            materials_tab.Size = new Size(533, 379);
-            materials_tab.TabIndex = 2;
-            materials_tab.Text = "Materials";
-            materials_tab.UseVisualStyleBackColor = true;
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.BackColor = SystemColors.ActiveCaptionText;
-            label1.Font = new Font("Times New Roman", 18F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.ForeColor = SystemColors.ButtonFace;
-            label1.Location = new Point(412, 9);
-            label1.Name = "label1";
-            label1.Size = new Size(134, 27);
-            label1.TabIndex = 16;
-            label1.Text = "Добавление";
+            txt_PersonalOtdelID.Font = new Font("Times New Roman", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            txt_PersonalOtdelID.FormattingEnabled = true;
+            txt_PersonalOtdelID.Location = new Point(159, 70);
+            txt_PersonalOtdelID.Name = "txt_PersonalOtdelID";
+            txt_PersonalOtdelID.Size = new Size(292, 29);
+            txt_PersonalOtdelID.TabIndex = 41;
             // 
             // txt_PersonalRoleID
             // 
             txt_PersonalRoleID.Font = new Font("Times New Roman", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            txt_PersonalRoleID.Location = new Point(159, 16);
+            txt_PersonalRoleID.FormattingEnabled = true;
+            txt_PersonalRoleID.Location = new Point(159, 14);
             txt_PersonalRoleID.Name = "txt_PersonalRoleID";
             txt_PersonalRoleID.Size = new Size(292, 29);
-            txt_PersonalRoleID.TabIndex = 1;
-            // 
-            // txt_PersonalOtdelID
-            // 
-            txt_PersonalOtdelID.Font = new Font("Times New Roman", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            txt_PersonalOtdelID.Location = new Point(159, 72);
-            txt_PersonalOtdelID.Name = "txt_PersonalOtdelID";
-            txt_PersonalOtdelID.Size = new Size(292, 29);
-            txt_PersonalOtdelID.TabIndex = 2;
-            // 
-            // txt_PersonalName
-            // 
-            txt_PersonalName.Font = new Font("Times New Roman", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            txt_PersonalName.Location = new Point(159, 127);
-            txt_PersonalName.Name = "txt_PersonalName";
-            txt_PersonalName.Size = new Size(292, 29);
-            txt_PersonalName.TabIndex = 3;
-            // 
-            // txt_PersonalSname
-            // 
-            txt_PersonalSname.Font = new Font("Times New Roman", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            txt_PersonalSname.Location = new Point(159, 182);
-            txt_PersonalSname.Name = "txt_PersonalSname";
-            txt_PersonalSname.Size = new Size(292, 29);
-            txt_PersonalSname.TabIndex = 4;
-            // 
-            // txt_PersonalLname
-            // 
-            txt_PersonalLname.Font = new Font("Times New Roman", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            txt_PersonalLname.Location = new Point(159, 234);
-            txt_PersonalLname.Name = "txt_PersonalLname";
-            txt_PersonalLname.Size = new Size(292, 29);
-            txt_PersonalLname.TabIndex = 5;
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.BackColor = SystemColors.ActiveCaptionText;
-            label2.Font = new Font("Times New Roman", 18F, FontStyle.Regular, GraphicsUnit.Point);
-            label2.ForeColor = SystemColors.ButtonFace;
-            label2.Location = new Point(56, 16);
-            label2.Name = "label2";
-            label2.Size = new Size(69, 27);
-            label2.TabIndex = 17;
-            label2.Text = "roleId";
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.BackColor = SystemColors.ActiveCaptionText;
-            label3.Font = new Font("Times New Roman", 18F, FontStyle.Regular, GraphicsUnit.Point);
-            label3.ForeColor = SystemColors.ButtonFace;
-            label3.Location = new Point(56, 72);
-            label3.Name = "label3";
-            label3.Size = new Size(85, 27);
-            label3.TabIndex = 18;
-            label3.Text = "otdelID";
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.BackColor = SystemColors.ActiveCaptionText;
-            label4.Font = new Font("Times New Roman", 18F, FontStyle.Regular, GraphicsUnit.Point);
-            label4.ForeColor = SystemColors.ButtonFace;
-            label4.Location = new Point(56, 129);
-            label4.Name = "label4";
-            label4.Size = new Size(69, 27);
-            label4.TabIndex = 19;
-            label4.Text = "Name";
-            // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.BackColor = SystemColors.ActiveCaptionText;
-            label5.Font = new Font("Times New Roman", 18F, FontStyle.Regular, GraphicsUnit.Point);
-            label5.ForeColor = SystemColors.ButtonFace;
-            label5.Location = new Point(56, 182);
-            label5.Name = "label5";
-            label5.Size = new Size(76, 27);
-            label5.TabIndex = 20;
-            label5.Text = "Sname";
-            // 
-            // label6
-            // 
-            label6.AutoSize = true;
-            label6.BackColor = SystemColors.ActiveCaptionText;
-            label6.Font = new Font("Times New Roman", 18F, FontStyle.Regular, GraphicsUnit.Point);
-            label6.ForeColor = SystemColors.ButtonFace;
-            label6.Location = new Point(56, 232);
-            label6.Name = "label6";
-            label6.Size = new Size(79, 27);
-            label6.TabIndex = 21;
-            label6.Text = "Lname";
-            // 
-            // label7
-            // 
-            label7.AutoSize = true;
-            label7.BackColor = SystemColors.ActiveCaptionText;
-            label7.Font = new Font("Times New Roman", 18F, FontStyle.Regular, GraphicsUnit.Point);
-            label7.ForeColor = SystemColors.ButtonFace;
-            label7.Location = new Point(56, 284);
-            label7.Name = "label7";
-            label7.Size = new Size(73, 27);
-            label7.TabIndex = 23;
-            label7.Text = "Phone";
-            // 
-            // txt_PersonalPhone
-            // 
-            txt_PersonalPhone.Font = new Font("Times New Roman", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            txt_PersonalPhone.Location = new Point(159, 286);
-            txt_PersonalPhone.Name = "txt_PersonalPhone";
-            txt_PersonalPhone.Size = new Size(292, 29);
-            txt_PersonalPhone.TabIndex = 22;
+            txt_PersonalRoleID.TabIndex = 40;
             // 
             // btn_Add1
             // 
@@ -294,16 +136,168 @@
             btn_Add1.UseVisualStyleBackColor = false;
             btn_Add1.Click += btn_Add1_Click;
             // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.BackColor = SystemColors.ActiveCaptionText;
+            label7.Font = new Font("Times New Roman", 18F, FontStyle.Regular, GraphicsUnit.Point);
+            label7.ForeColor = SystemColors.ButtonFace;
+            label7.Location = new Point(39, 284);
+            label7.Name = "label7";
+            label7.Size = new Size(73, 27);
+            label7.TabIndex = 23;
+            label7.Text = "Phone";
+            // 
+            // txt_PersonalPhone
+            // 
+            txt_PersonalPhone.Font = new Font("Times New Roman", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            txt_PersonalPhone.Location = new Point(159, 286);
+            txt_PersonalPhone.Name = "txt_PersonalPhone";
+            txt_PersonalPhone.Size = new Size(292, 29);
+            txt_PersonalPhone.TabIndex = 22;
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.BackColor = SystemColors.ActiveCaptionText;
+            label6.Font = new Font("Times New Roman", 18F, FontStyle.Regular, GraphicsUnit.Point);
+            label6.ForeColor = SystemColors.ButtonFace;
+            label6.Location = new Point(39, 232);
+            label6.Name = "label6";
+            label6.Size = new Size(104, 27);
+            label6.TabIndex = 21;
+            label6.Text = "Password";
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.BackColor = SystemColors.ActiveCaptionText;
+            label5.Font = new Font("Times New Roman", 18F, FontStyle.Regular, GraphicsUnit.Point);
+            label5.ForeColor = SystemColors.ButtonFace;
+            label5.Location = new Point(39, 182);
+            label5.Name = "label5";
+            label5.Size = new Size(68, 27);
+            label5.TabIndex = 20;
+            label5.Text = "Login";
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.BackColor = SystemColors.ActiveCaptionText;
+            label4.Font = new Font("Times New Roman", 18F, FontStyle.Regular, GraphicsUnit.Point);
+            label4.ForeColor = SystemColors.ButtonFace;
+            label4.Location = new Point(39, 129);
+            label4.Name = "label4";
+            label4.Size = new Size(106, 27);
+            label4.TabIndex = 19;
+            label4.Text = "FullName";
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.BackColor = SystemColors.ActiveCaptionText;
+            label3.Font = new Font("Times New Roman", 18F, FontStyle.Regular, GraphicsUnit.Point);
+            label3.ForeColor = SystemColors.ButtonFace;
+            label3.Location = new Point(39, 72);
+            label3.Name = "label3";
+            label3.Size = new Size(85, 27);
+            label3.TabIndex = 18;
+            label3.Text = "otdelID";
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.BackColor = SystemColors.ActiveCaptionText;
+            label2.Font = new Font("Times New Roman", 18F, FontStyle.Regular, GraphicsUnit.Point);
+            label2.ForeColor = SystemColors.ButtonFace;
+            label2.Location = new Point(39, 16);
+            label2.Name = "label2";
+            label2.Size = new Size(69, 27);
+            label2.TabIndex = 17;
+            label2.Text = "roleId";
+            // 
+            // txt_Pass
+            // 
+            txt_Pass.Font = new Font("Times New Roman", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            txt_Pass.Location = new Point(159, 234);
+            txt_Pass.Name = "txt_Pass";
+            txt_Pass.Size = new Size(292, 29);
+            txt_Pass.TabIndex = 5;
+            // 
+            // txt_Log
+            // 
+            txt_Log.Font = new Font("Times New Roman", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            txt_Log.Location = new Point(159, 182);
+            txt_Log.Name = "txt_Log";
+            txt_Log.Size = new Size(292, 29);
+            txt_Log.TabIndex = 4;
+            // 
+            // txt_PersonalName
+            // 
+            txt_PersonalName.Font = new Font("Times New Roman", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            txt_PersonalName.Location = new Point(159, 127);
+            txt_PersonalName.Name = "txt_PersonalName";
+            txt_PersonalName.Size = new Size(292, 29);
+            txt_PersonalName.TabIndex = 3;
+            // 
+            // orders_tab
+            // 
+            orders_tab.Controls.Add(txt_OrdersProccesID);
+            orders_tab.Controls.Add(txt_OrdersOtdelID);
+            orders_tab.Controls.Add(ch_OrdersStatus);
+            orders_tab.Controls.Add(btn_Add2);
+            orders_tab.Controls.Add(label9);
+            orders_tab.Controls.Add(label11);
+            orders_tab.Controls.Add(label12);
+            orders_tab.Controls.Add(label13);
+            orders_tab.Controls.Add(txt_OrdersPartnerID);
+            orders_tab.Location = new Point(4, 24);
+            orders_tab.Name = "orders_tab";
+            orders_tab.Padding = new Padding(3);
+            orders_tab.Size = new Size(533, 379);
+            orders_tab.TabIndex = 1;
+            orders_tab.Text = "Orders";
+            orders_tab.UseVisualStyleBackColor = true;
+            // 
+            // txt_OrdersProccesID
+            // 
+            txt_OrdersProccesID.Font = new Font("Times New Roman", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            txt_OrdersProccesID.FormattingEnabled = true;
+            txt_OrdersProccesID.Location = new Point(172, 71);
+            txt_OrdersProccesID.Name = "txt_OrdersProccesID";
+            txt_OrdersProccesID.Size = new Size(292, 29);
+            txt_OrdersProccesID.TabIndex = 40;
+            // 
+            // txt_OrdersOtdelID
+            // 
+            txt_OrdersOtdelID.Font = new Font("Times New Roman", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            txt_OrdersOtdelID.FormattingEnabled = true;
+            txt_OrdersOtdelID.Location = new Point(172, 13);
+            txt_OrdersOtdelID.Name = "txt_OrdersOtdelID";
+            txt_OrdersOtdelID.Size = new Size(292, 29);
+            txt_OrdersOtdelID.TabIndex = 39;
+            // 
+            // ch_OrdersStatus
+            // 
+            ch_OrdersStatus.AutoSize = true;
+            ch_OrdersStatus.Font = new Font("Segoe UI", 24F, FontStyle.Regular, GraphicsUnit.Point);
+            ch_OrdersStatus.Location = new Point(172, 194);
+            ch_OrdersStatus.Name = "ch_OrdersStatus";
+            ch_OrdersStatus.Size = new Size(15, 14);
+            ch_OrdersStatus.TabIndex = 38;
+            ch_OrdersStatus.UseVisualStyleBackColor = true;
+            // 
             // btn_Add2
             // 
             btn_Add2.BackColor = SystemColors.ActiveCaptionText;
             btn_Add2.ForeColor = SystemColors.ButtonHighlight;
-            btn_Add2.Location = new Point(250, 288);
+            btn_Add2.Location = new Point(240, 233);
             btn_Add2.Name = "btn_Add2";
             btn_Add2.Size = new Size(107, 36);
             btn_Add2.TabIndex = 37;
             btn_Add2.Text = "Add";
             btn_Add2.UseVisualStyleBackColor = false;
+            btn_Add2.Click += btn_Add2_Click;
             // 
             // label9
             // 
@@ -311,23 +305,11 @@
             label9.BackColor = SystemColors.ActiveCaptionText;
             label9.Font = new Font("Times New Roman", 18F, FontStyle.Regular, GraphicsUnit.Point);
             label9.ForeColor = SystemColors.ButtonFace;
-            label9.Location = new Point(30, 231);
+            label9.Location = new Point(30, 183);
             label9.Name = "label9";
             label9.Size = new Size(70, 27);
             label9.TabIndex = 34;
             label9.Text = "Status";
-            // 
-            // label10
-            // 
-            label10.AutoSize = true;
-            label10.BackColor = SystemColors.ActiveCaptionText;
-            label10.Font = new Font("Times New Roman", 18F, FontStyle.Regular, GraphicsUnit.Point);
-            label10.ForeColor = SystemColors.ButtonFace;
-            label10.Location = new Point(30, 179);
-            label10.Name = "label10";
-            label10.Size = new Size(58, 27);
-            label10.TabIndex = 33;
-            label10.Text = "Date";
             // 
             // label11
             // 
@@ -361,17 +343,9 @@
             label13.ForeColor = SystemColors.ButtonFace;
             label13.Location = new Point(30, 13);
             label13.Name = "label13";
-            label13.Size = new Size(80, 27);
+            label13.Size = new Size(90, 27);
             label13.TabIndex = 30;
-            label13.Text = "otdelId";
-            // 
-            // txt_OrdersDate
-            // 
-            txt_OrdersDate.Font = new Font("Times New Roman", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            txt_OrdersDate.Location = new Point(172, 179);
-            txt_OrdersDate.Name = "txt_OrdersDate";
-            txt_OrdersDate.Size = new Size(292, 29);
-            txt_OrdersDate.TabIndex = 28;
+            label13.Text = "OtdelID";
             // 
             // txt_OrdersPartnerID
             // 
@@ -381,31 +355,44 @@
             txt_OrdersPartnerID.Size = new Size(292, 29);
             txt_OrdersPartnerID.TabIndex = 27;
             // 
-            // txt_OrdersProccesID
+            // materials_tab
             // 
-            txt_OrdersProccesID.Font = new Font("Times New Roman", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            txt_OrdersProccesID.Location = new Point(172, 69);
-            txt_OrdersProccesID.Name = "txt_OrdersProccesID";
-            txt_OrdersProccesID.Size = new Size(292, 29);
-            txt_OrdersProccesID.TabIndex = 26;
+            materials_tab.Controls.Add(txt_MaterialsProviderID);
+            materials_tab.Controls.Add(txt_MaterialsTypeMatID);
+            materials_tab.Controls.Add(btn_Add3);
+            materials_tab.Controls.Add(label14);
+            materials_tab.Controls.Add(label15);
+            materials_tab.Controls.Add(label16);
+            materials_tab.Controls.Add(label17);
+            materials_tab.Controls.Add(label18);
+            materials_tab.Controls.Add(txt_MaterialsName);
+            materials_tab.Controls.Add(txt_MaterialsPrice);
+            materials_tab.Controls.Add(txt_MaterialsDencity);
+            materials_tab.Location = new Point(4, 24);
+            materials_tab.Name = "materials_tab";
+            materials_tab.Padding = new Padding(3);
+            materials_tab.Size = new Size(533, 379);
+            materials_tab.TabIndex = 2;
+            materials_tab.Text = "Materials";
+            materials_tab.UseVisualStyleBackColor = true;
             // 
-            // txt_OrdersOteldID
+            // txt_MaterialsProviderID
             // 
-            txt_OrdersOteldID.Font = new Font("Times New Roman", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            txt_OrdersOteldID.Location = new Point(172, 13);
-            txt_OrdersOteldID.Name = "txt_OrdersOteldID";
-            txt_OrdersOteldID.Size = new Size(292, 29);
-            txt_OrdersOteldID.TabIndex = 25;
+            txt_MaterialsProviderID.Font = new Font("Times New Roman", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            txt_MaterialsProviderID.FormattingEnabled = true;
+            txt_MaterialsProviderID.Location = new Point(172, 67);
+            txt_MaterialsProviderID.Name = "txt_MaterialsProviderID";
+            txt_MaterialsProviderID.Size = new Size(292, 29);
+            txt_MaterialsProviderID.TabIndex = 41;
             // 
-            // ch_OrdersStatus
+            // txt_MaterialsTypeMatID
             // 
-            ch_OrdersStatus.AutoSize = true;
-            ch_OrdersStatus.Font = new Font("Segoe UI", 24F, FontStyle.Regular, GraphicsUnit.Point);
-            ch_OrdersStatus.Location = new Point(172, 242);
-            ch_OrdersStatus.Name = "ch_OrdersStatus";
-            ch_OrdersStatus.Size = new Size(15, 14);
-            ch_OrdersStatus.TabIndex = 38;
-            ch_OrdersStatus.UseVisualStyleBackColor = true;
+            txt_MaterialsTypeMatID.Font = new Font("Times New Roman", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            txt_MaterialsTypeMatID.FormattingEnabled = true;
+            txt_MaterialsTypeMatID.Location = new Point(172, 15);
+            txt_MaterialsTypeMatID.Name = "txt_MaterialsTypeMatID";
+            txt_MaterialsTypeMatID.Size = new Size(292, 29);
+            txt_MaterialsTypeMatID.TabIndex = 40;
             // 
             // btn_Add3
             // 
@@ -417,6 +404,7 @@
             btn_Add3.TabIndex = 37;
             btn_Add3.Text = "Add";
             btn_Add3.UseVisualStyleBackColor = false;
+            btn_Add3.Click += btn_Add3_Click;
             // 
             // label14
             // 
@@ -502,21 +490,17 @@
             txt_MaterialsDencity.Size = new Size(292, 29);
             txt_MaterialsDencity.TabIndex = 27;
             // 
-            // txt_MaterialsProviderID
+            // label1
             // 
-            txt_MaterialsProviderID.Font = new Font("Times New Roman", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            txt_MaterialsProviderID.Location = new Point(172, 69);
-            txt_MaterialsProviderID.Name = "txt_MaterialsProviderID";
-            txt_MaterialsProviderID.Size = new Size(292, 29);
-            txt_MaterialsProviderID.TabIndex = 26;
-            // 
-            // txt_MaterialsType
-            // 
-            txt_MaterialsType.Font = new Font("Times New Roman", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            txt_MaterialsType.Location = new Point(172, 13);
-            txt_MaterialsType.Name = "txt_MaterialsType";
-            txt_MaterialsType.Size = new Size(292, 29);
-            txt_MaterialsType.TabIndex = 25;
+            label1.AutoSize = true;
+            label1.BackColor = SystemColors.ActiveCaptionText;
+            label1.Font = new Font("Times New Roman", 18F, FontStyle.Regular, GraphicsUnit.Point);
+            label1.ForeColor = SystemColors.ButtonFace;
+            label1.Location = new Point(412, 9);
+            label1.Name = "label1";
+            label1.Size = new Size(134, 27);
+            label1.TabIndex = 16;
+            label1.Text = "Добавление";
             // 
             // AddForm
             // 
@@ -547,11 +531,9 @@
         private Label label1;
         private Label label3;
         private Label label2;
-        private TextBox txt_PersonalLname;
-        private TextBox txt_PersonalSname;
+        private TextBox txt_Pass;
+        private TextBox txt_Log;
         private TextBox txt_PersonalName;
-        private TextBox txt_PersonalOtdelID;
-        private TextBox txt_PersonalRoleID;
         private Label label7;
         private TextBox txt_PersonalPhone;
         private Label label6;
@@ -561,14 +543,10 @@
         private CheckBox ch_OrdersStatus;
         private Button btn_Add2;
         private Label label9;
-        private Label label10;
         private Label label11;
         private Label label12;
         private Label label13;
-        private TextBox txt_OrdersDate;
         private TextBox txt_OrdersPartnerID;
-        private TextBox txt_OrdersProccesID;
-        private TextBox txt_OrdersOteldID;
         private Button btn_Add3;
         private Label label14;
         private Label label15;
@@ -578,7 +556,11 @@
         private TextBox txt_MaterialsName;
         private TextBox txt_MaterialsPrice;
         private TextBox txt_MaterialsDencity;
-        private TextBox txt_MaterialsProviderID;
-        private TextBox txt_MaterialsType;
+        private ComboBox txt_OrdersProccesID;
+        private ComboBox txt_OrdersOtdelID;
+        private ComboBox txt_PersonalOtdelID;
+        private ComboBox txt_PersonalRoleID;
+        private ComboBox txt_MaterialsProviderID;
+        private ComboBox txt_MaterialsTypeMatID;
     }
 }
